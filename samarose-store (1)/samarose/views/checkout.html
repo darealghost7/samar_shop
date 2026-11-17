@@ -1,0 +1,51 @@
+<section aria-labelledby="co-h">
+  <div class="wrap">
+    <h1 id="co-h">Checkout</h1>
+    <p id="empty" class="lead" hidden>Your cart is empty. <a class="link" href="/shop">Browse the shop</a>.</p>
+    <p id="nopay" class="notice bad" hidden>Ordering is not open yet because the shop has not added its bank details. Please contact the shop.</p>
+    <div class="co" id="co" hidden>
+      <div>
+        <form id="details" novalidate>
+          <fieldset><legend>Your details</legend>
+            <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" data-err="name"></span></div>
+            <div class="row2">
+              <div class="field"><label for="f-email">Email address</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" data-err="email"></span></div>
+              <div class="field"><label for="f-phone">Contact number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><span class="err" data-err="phone"></span></div>
+            </div>
+          </fieldset>
+          <fieldset><legend>Collection or delivery</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="fulfilment" value="collection" checked><span>Collection<small>Free. Collect from the shop.</small></span></label>
+              <label class="choice"><input type="radio" name="fulfilment" value="delivery"><span>Delivery<small id="fee-note">Delivered to your address.</small></span></label>
+            </div>
+            <div id="collection" class="panel"><p class="kvl">Collection address</p><p>{{!collection_addr}}</p><p class="muted">We will email you when your order is ready.</p></div>
+            <div id="delivery" hidden>
+              <div class="field"><label for="f-street">Street address</label><input id="f-street" name="street" autocomplete="address-line1"><span class="err" data-err="street"></span></div>
+              <div class="row2">
+                <div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-line2"><span class="err" data-err="suburb"></span></div>
+                <div class="field"><label for="f-city">City or town</label><input id="f-city" name="city" autocomplete="address-level2"><span class="err" data-err="city"></span></div>
+              </div>
+              <div class="row2">
+                <div class="field"><label for="f-province">Province</label><select id="f-province" name="province" autocomplete="address-level1"><option value="">Choose province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>Northern Cape</option><option>North West</option><option>Western Cape</option></select><span class="err" data-err="province"></span></div>
+                <div class="field"><label for="f-postal">Postal code</label><input id="f-postal" name="postal_code" inputmode="numeric" maxlength="4" autocomplete="postal-code"><span class="err" data-err="postal_code"></span></div>
+              </div>
+              <div class="field"><label for="f-notes">Delivery instructions (optional)</label><textarea id="f-notes" name="instructions" rows="2" maxlength="300"></textarea></div>
+              <div class="panel"><p class="kvl">Share your location (optional)</p><p class="muted">Your browser asks for permission first. A typed address is always enough.</p><button class="btn btn-ghost" type="button" id="geo">Share my location</button><p class="muted" id="geo-status" role="status"></p></div>
+            </div>
+          </fieldset>
+          <div class="field"><label class="check"><input type="checkbox" name="consent"><span>I agree to the <a href="/terms" target="_blank">Terms and Conditions</a> and consent to {{shop_name}} using my details to process this order, as explained in the <a href="/privacy" target="_blank">Privacy Policy</a>.</span></label><span class="err" data-err="consent"></span></div>
+          <p class="notice bad" id="form-err" role="alert" hidden></p>
+          <button class="btn" type="submit">Review order</button>
+        </form>
+        <div id="review" hidden>
+          <h2>Review your order</h2>
+          <div id="review-body"></div>
+          <p class="notice bad" id="pay-err" role="alert" hidden></p>
+          <div class="actions"><button class="btn btn-ghost" type="button" id="edit">Edit details</button><button class="btn" type="button" id="pay">Place order</button></div>
+          <p class="muted">After you place your order you will see our bank details to pay by EFT. We prepare your order once your payment reflects in our account.</p>
+        </div>
+      </div>
+      <aside class="summary" id="summary" aria-label="Order summary"></aside>
+    </div>
+  </div>
+</section>

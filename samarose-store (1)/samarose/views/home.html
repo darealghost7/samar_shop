@@ -1,0 +1,47 @@
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{shop_name}}</p>
+      <h1 id="h1">{{hero_title}}</h1>
+      <p class="lead">{{hero_text}}</p>
+      <ul class="facts"><li>Prices in rand</li><li>Pay by EFT</li><li>Collection or delivery</li></ul>
+      <a class="btn" href="/shop">Shop now</a>
+    </div>
+    <div class="hero-photo">{{!hero}}</div>
+  </div>
+</section>
+
+<section aria-labelledby="featured-h">
+  <div class="wrap">
+    <h2 id="featured-h">Featured products</h2>
+    <div class="grid four" data-products="featured" aria-live="polite">
+      <article class="card skel"><div class="frame"></div><div class="card-body"></div></article>
+      <article class="card skel"><div class="frame"></div><div class="card-body"></div></article>
+      <article class="card skel"><div class="frame"></div><div class="card-body"></div></article>
+      <article class="card skel"><div class="frame"></div><div class="card-body"></div></article>
+    </div>
+    <p class="center"><a class="btn btn-ghost" href="/shop">View all products</a></p>
+  </div>
+</section>
+
+<section class="tint" aria-labelledby="why-h">
+  <div class="wrap">
+    <h2 id="why-h">Why shop with {{shop_name}}</h2>
+    <ul class="why">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5v11H3z"/><path d="M9 20v-6h6v6"/></svg><h3>Collect in store</h3><p>Pick up your order from the shop once it is ready. We email you when it is.</p></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v10H2zM14 10h4l4 3v3h-8"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Delivery to your door</h3><p>Enter your address at checkout. The delivery fee is shown before you pay.</p></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><h3>Pay by EFT</h3><p>Pay by bank transfer from your own banking app. We prepare your order once your payment reflects.</p></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.500-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg><h3>Visit the shop</h3><p>Prefer to see things first? Our address and opening hours are just below.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="visit-h">
+  <div class="wrap visit">
+    <h2 id="visit-h" class="moment">Visit {{shop_name}}</h2>
+    <div class="visit-grid">
+      {{!contact}}
+      <div class="visit-actions">{{!wa}}<a class="btn btn-ghost" href="/contact">Contact the shop</a></div>
+    </div>
+  </div>
+</section>

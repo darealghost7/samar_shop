@@ -1,0 +1,17 @@
+<section aria-labelledby="contact-h">
+  <div class="wrap">
+    <h1 id="contact-h">Contact {{shop_name}}</h1>
+    <div class="split">
+      <div>{{!contact}}</div>
+      <form id="contact-form" novalidate>
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required><span class="err" data-err="name"></span></div>
+        <div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="err" data-err="email"></span></div>
+        <div class="field"><label for="c-phone">Phone number (optional)</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"><span class="err" data-err="phone"></span></div>
+        <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required></textarea><span class="err" data-err="message"></span></div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn" type="submit">Send message</button>
+        <p class="notice" id="contact-status" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
